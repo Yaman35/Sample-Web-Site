@@ -1,0 +1,437 @@
+* {
+    box-sizing: border-box;      /* Genişlik ve yükselikğin margin, padding veya border eklendiğinde değişmesini engeller */
+}
+
+body {
+    margin: 0;                   /* Bunlar bütün projelerde default olarak yapılır */
+    padding: 0;                  /* Böylelikle sayfa içeriklerinin sıfıra sıfırdan başlaması sağlanır */
+    background-color: #dbdbdb;       /* Sayfamızın arka plan rengini oluşturduk */
+    font-family: 'Oxygen', sans-serif; /* Bu kodu index.html sayfasına ilişkilendirdiğimiz link sayesinde kullanabiliyoruz */
+}
+
+#social {
+    background-color: black;   /* Social Bar arka plan rengi oluşturduk */
+    color: white;              /* Text ler için renk belirledik */
+    height: 55px;                /* Social Bar ın div boyutlarını ayarladık, yükseklik 55 px genişlik sayfa boyu */
+    width: 100%;                 /* ^^^ */
+    position: sticky;            /* Social Bar ın, kullanıcı sayfayı aşağıya doğru hareket ettirse dahi yukarıdan top:0 kısmında gözükmesi için yazıldı */
+    top:0;                       /* ^^^ */
+    z-index: 1;                  /* Sayfa üzerinde herhangi bir şeyin bunun üzerine çıkması için ön plana aldık, eğer -1 yazsaydık arka planda kalır ve üzerinde bir şeyler gözükebilirdi */
+    font-size: 18px;             /* İçeriklerin fon büyüklüklerini ayarladık */
+    text-align: right;           /* Yazıları sağa almak için */
+    padding: 15px;               /* Dört bir taraftan iç boşluk 15 px olsun demektir */
+} 
+
+font {
+    float: left;                 /* font etiketini (site ismi ve slogan) sayfanın soluna doğru yapıştırdı */
+    letter-spacing: 2px;         /* Harfler arasında 2 px lik bir boşluk bıraktır */
+    color: white;              /* Rengini ayarladık */
+}
+
+span {                           /* font içerisindeki span a müdahele ediyoruz */
+    font-size: 12px;             /* font size ayarladık */
+    letter-spacing: 1px;         /* Harfler arasındaki boşluğu 1 px e indirdik */
+}
+
+#logo {
+    background-color: black;
+    color: white;
+}
+
+#social i {
+    margin-right: 15px;          /* Herbir icon un sağ tarafından 15 px lik boşluk bırakarak aralarını açtı */ 
+    border-radius: 3px;
+}
+
+#search {
+    color: white;
+    background: black;
+}
+
+#facebook {
+    color: #3b5998;
+    font-size: 18px;  
+    background-color: white;  
+    border-radius: 3px;
+    box-sizing: border-box;
+    
+}
+
+#instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    border-radius: 5px;
+    color: white;
+}
+
+#twitter  {
+    color: #1da1f2;
+}
+
+#google {
+    color: white;
+    background: black;
+}
+
+#social i:hover {                /* icon ların üzerine gelindiğinde işlem yaptırmak için */
+    opacity: 0.8;                /* Opaklığını azalttık, (0.1 - 1.0) */
+}
+
+#container {                     /* id si container olan div imin */
+    width: 80%;                  /* Sayfamın 80% kadar bir genişliğine sahip olsun */
+    margin: auto;                /* Sayfam içerisinde ortalansın */
+    height: auto;
+}
+
+header{
+    width: 100%;                 /* Burada header classı container olan div içerisinde olduğundan aslında sayfanın 80% ni boyutunda olur yine */
+    height: 250px;               /* Ve yüksekliğini ayarladık */
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);  /* Resim arkasına biraz gölgeleme yaptık */
+    border-bottom-left-radius: 20px;                    /* Aşağıda resmi yuvarlayıp burada gölgeleme yapınca tırnak şeklinde çıkıntı çıktı onları da yuvarlamak için */
+    border-bottom-right-radius: 20px;
+    position: relative;          /* Aşağıdaki class ı centered olan div in resim üzerine gelebilmesi için bu şekilde ve açıklaması orada position özelliğinde yazıyor */
+    color:white;               /* Header üzeründeki tüm textlerin renginin beyaz olmasını sağladık, burada tek olduğu için aşağaıdaki classı centered olan div kısmında da belirleyebilirdik */
+    font-family: 'Teko', sans-serif;        /* Yazı tipi ayarlandı */
+    font-size: 35px;                        /* Yazı boyutu ayarlandı */
+    background-color: black;   /* Header üzerindeki yazı daha net görülsün diye resmin opaklığı ile oynamak ve bu netliği sağlayabilmek için böyle birşey yapıldı */
+    margin-bottom: 5px;          /* Header üzerindeki içeriklerin altından 5 px lik boşluk verdik ki araları açılsın */
+}
+
+#headerResim {
+    width: 100%;                         /* Bu şekilde ölçüler vererek resmimizi header içine oturtabildik */
+    height: 250px;
+    border-bottom-left-radius: 20px;     /* Resmin sağ ve sol altlarından yuvarlama işlemi yaptık */
+    border-bottom-right-radius: 20px;
+    opacity: .8;                         /* Yukarıda bahsedeilen header üzerindeki yazının daha net görülebilmesi için yazıldı */
+
+}
+
+#centered {
+    position: absolute;  /* Bunun position:absolute iken header inki de position:relative olmalı ki header a göre konumlansın */
+    top: 50%;            /* Sıradaki iki kod ile yazıyı header içerisinde ortaladık */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Bu kod yazının tam ortalanabilmesi için yazılır aksi takdirde yazılar hafif sağa doğru kayık oluyor */
+}
+
+section {
+    width: 100%;         /* Class ı conatiner olan div içerisinde bulunduğundan bu da sayfanın 80% i kadar bir genişliğe sahip olur 100% yapsak bile*/
+    height: auto;        /* içeriğe göre kendisi ayarlasın diye */
+    background-color: #f1f1f1;   /* Arka plan rengi ayarladık */
+    border-top-left-radius: 20px;  /* section kısmının üst kısımlarını kırptık */
+    border-top-right-radius: 20px;
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);  /* Gölgeleme yaptık */
+    margin-top: 15px;     /* header ile section kısımları arasındaki boşluğu bununla ayarladık, açtık */
+    overflow: auto;       /* Aşağıdaki nav özelliklerini yazınca section dışına çıktı, onu tekrardan section içerisine oturtmak için yazdık, yani bulunduğu etiketin içerisine sığdırıyor */
+}
+
+nav {                 /* Menu eleamanlarının bulunduğu alana müdahaleediyoruz */
+    width:20%;        /* section kısmının 20% si kadar olsun dedik 0*/
+    float: left;      /* Kendisinden sonra gelecek olan içeriğin altına değil de yanına gelmesi için yazıldı */
+    margin-top: 10px; /* Üstten boşluk bıraktık */
+    height: auto;     /* Yükseliğini otomatik ayarlattık */
+}
+
+nav ul {
+    width: 550px;      /* Sıradaki iki kod ile boyutlarını ayarladık */
+    height: 100%;
+    margin: 0;        /* li etiketleri nav içerisinde sıfıra sıfırdan başlasın diye, fakat burada bile hala li etiketlerinin önünde bulunan noktalar vardır */
+    padding: 0;
+}
+
+nav li {
+    list-style-type: none;   /* li etiketlerinin önünde bulunan bnoktaları işte burada kaybettik */
+}
+
+nav li a{
+    text-decoration: none;   /* Böylelikle li etiketlerinin altındaki çizgileri de kaybetmiş olduk */
+    width: 200px;            /* Linklerin genişliklerini belirledik */
+    height: 50px;            /* Linklerin yüksekliklerini belirledik */
+    line-height:50px;        /* Linkler arasındaki satır aralıklarını belirledik */
+    color: black;          /* Linklerin renklerini belirledik */
+    border-bottom: 1px solid #b4b4b4;    /* Linklerin altına bir çizgi çizdirdik */
+    padding-left: 20px;                    /* Sayfanın solundan 20 px lik boşluk bıraktık */
+    display: block;                        /* Menu elemanları alt alta yazılabilsin diye display: block yaptık */
+     
+}
+
+nav li a:hover{                   /* link etiketlerimin üzerine gelindiğinde */
+    color:white;                /* text renkleri beya olsun dedik */
+    background-color: #adadad;  /* Arka plan rengini de değiştirmiş olduk */
+}
+
+i {                               /* Menu seçenekleri önündeki iconlara müdahale ediyoruz */
+    margin-left: 10px;            /* iconların sayfanın solundan 10 px lik bir boluk bıraktık */
+    margin-right: 20px;           /* iconların sağından 20 px lik bir boşluk bıraktık, icon lar ile textler arasındaki boşluk oluşturuldu */
+}
+
+main {                            /* İçeriklerin yazılacağı alana müdahale ediyoruz */
+    float: left;                  /* Menuden sonra gelecek şekilde sayfanın soluna doğru yasladık,bu yazılmazsa menunun alt tarafta çıkardı */
+    height: auto;                 /* Gelecek içeriğe göre yükselik kendisini ayarlasın */
+    width: 80%;                   /* Burada daha önce nav kısmına section kısmının 20% sini ayırmıştık buna da geri kalan 80% sini verdik */
+    padding: 10px;
+}
+
+.icerik {
+    width: 48%;                   /* Sayfada aynı satırda iki tane resimli içerik olacak için 48+48 olsun aralarındaki boşluğa da 4% lik kalsın diye bu şekilde yazıldı */
+    height: auto;                 /* İçeriğe göre yüksekliğini ayarlasın dedik */
+    display: inline-block;        /* Aynı Satırda olur ancak blok özelliklerini yansıtır, block yapsaydık alt alta olurlardı */
+    margin-right: 15px;           /* Yan yana olan İki div arasındaki boşluğu bununla belirlemiş olduk */
+    margin-bottom: 15px;          /* Üst üste olan İki div arasındaki boşluğu bununla belirlemiş olduk */
+    border-radius: 10px;          /* İçerik classına sahip olan div kenarlarını yuvarladık*/
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);  /* Bu gölgeleme işlemini yapmazsak arka plan renigi ile içerik rengi aynı olduğundan dolayı radius işlemini göremeyiz */
+    /*padding: 5px;*/             /* Bu şekilde tüm div içeriklerinin dört bir yanından 5 px lik boşluklar verdik */
+}
+
+.resim {
+    width: 100%;                    /* İçinde bulunduğu etikete göre resmi ayarlaması için */
+    border-top-left-radius: 10px;   /* Bunları yukarıdaki yuvarlama işlemi resimden ötürü üst kısımlar yuvarlanmadığı için aynı ölçülerde resme de uyguladık */
+    border-top-right-radius: 10px;
+    transition: opacity 0.8s;       /* Resimlerde yalnıca opacity olayı geçiş efekt süresini belirledik */
+}
+
+.resim:hover{
+    opacity: .6;                    /* Resimlerin üzerine gelindiğinde opacity değerini belirledik, yukarıdaki transition süresine göre geçiş yapacak */
+}
+
+h5 {
+    margin: 10px;                   /* Başlık için dış boşluk belirledik */
+    color: black;               /* Rengini ayarladık */
+}
+
+.icerikText {
+    margin: 10px;                   /* Paragraf için dış boşluk belirledik */
+    color: gray;                  /* Rengini ayarladık */
+}
+
+.btnDevam {                         /* Butonun link hali yani buton tıklanmamış haldeyken özelliklerini belirliyoruz */
+    display:block;                  /* Bunu yapmamızın sebebi buna genişlik ve yükseklik tanımlayabilmemiz için, display: block yapınca artık bu link için boyutlarını belirleyebiliyoruz */
+    width: 150px;                   /* Butonun genişliğini belirledik */
+    height: 40px;                   /* Butonun yüksekliğini belirledik */
+    padding: 10px 20px;             /* Buton içerisindeki text etrafındaki boşlukları belirledik */
+    background-color: rgb(49, 175, 218);       /* Arka plan renigini belirledik */
+    color: white;                 /* Text color belirledik */
+    text-decoration: none;          /* Text altındaki çizgiyi kaybettik */
+    font-size: 15px;                /* Yazı boyutunu belirledik */
+    font-size: bold;                /* Yazı kalınlığını belirledik */
+    border-radius: 20px;            /* Butonun kenarlarını yuvarladık */
+    margin: 15px;                   /* Butonun dış çevresi ile olan mesafelerini ayarladık */
+}
+
+.btnDevam:hover {                   /* Butonun üzerine gelindiğinde */
+    opacity: 0.8;                   /* Opaklığı azalsın 0.8 olsun dedik */
+}
+
+footer {
+    width: 100%;                    /* footer kısmının boyutları belirlendi */
+    height: 75px;
+    background-color: black;      /* footer için arka plan rengi belirlendi */
+    color: white;                 /* Yazı rengi belirlendi */
+    text-align: center;             /* Yazıyı yatayda ortalamak için yazıldı */
+    line-height: 75px;              /* Yukarıda yükseklik 75px olduğu için buna da 75px verirsem yazı dikey olarak ortalanmış olur */
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);   /* Diğer yerlerde olduğu gibi footer kısmına da hafif bir gölgeleme işlemi yaptık */
+}
+
+/* Buradan sonrası Hakkımızda sayfası özellikleri */
+
+h1 {
+    text-align: center;              /* Yazıyı yatay eksende ortaladık */
+    background-color: black;       /* Arka plan rengi ayarlandı */
+    color: white;                  /* Yazı rengi ayarlandı */
+    height: 50px;                    /* Etikete yükseklik verildi */
+    line-height: 50px;               /* Yükselik 50px olduğu için yazıyı dikey eksende ortalayabilmek için line-height: özelliği de 50px olmalıdır */
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);
+}
+
+#rsmhakkimizda {
+    width: 350px;                    /* Resmin boyutları ayarlandı */
+    height: 300px;
+    float: left;                     /* Sol taraftan başlayarak akış sağlanmış olur, böylelikle resimden sonra yanına yazılar gelebilir aksi takdirde bunu yazmazsak yazılar resmin altına gidiyor */
+    border-radius: 10px;             /* Resmin kenarlarını yuvarladık */
+    margin: 15px;                    /* Resmin dışındaki dört bir yandan boşlukları ayarladık */
+    margin-left: 10px;
+    transition: 0.8s;                /* Geçiş efektleri için gereken süreyi belirledik */
+}
+
+#rsmhakkimizda:hover {               /* Resmin üzerine geldiğimizde */
+    opacity: 0.6;                    /* Opaklık değerini değiştirdik */
+}
+
+.hakicerik {
+    margin-right: 15px;              /* İçerik (paragraflar) kısımlarının sağ taraftan boşluğunu ayarladık */
+    font-size: 15px;                 /* Yazı boyutunu ayarladık */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Yazı tipi ayarlandı */ 
+    text-indent: 40px;               /* Her paragraf başlarken ne kadar satır başı boşluk bırakılacağı ayarlandı */
+    color: #494949;                /* Yazı rengi ayarlandı */
+}
+
+/* Buradan sonrası Referanslar sayfası özellikleri */
+
+.referans {                          /* Resim başlık ve detayın olduğu her bir dive müdahale ettik */
+    width: 30% ;                     /* Sayfamın bir bloğunda 3 adet referans divi olmasıni istediğim ve aralarındaki boşlukları da hesaplayarak bu şekilde belirlendi */
+    height: 300 px;                  /* Yükselik ayarlandı */
+    background-color: white;       /* Arka plan rengini ayarladık */
+    float: left;                     /* Akış soldan başlayarak devam etsin dedik */
+    margin: 10px;                    /* Div ler arası boşluk çaktık */
+    border-radius: 10px;             /* Div lerin köşelerini yuvarladık */ 
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);   /* Hafif gölgeleme işlemi devam */
+} 
+
+.refresim {
+    width: 100%;                     /* İçinde bulunduğu div etiketine genişlik olarak sığdır demektir */
+    height: 180px;                   /* Yüksekliğini belirledik */
+    border-top-left-radius: 10px;    /* Bu kısmı yine yukarıda yazmamıza rağmen resimden ötürü göremeyeceğimiz için resmin sol sağ üst köşelerine de bu şekilde yuvarlama kodu yazmalıyız */
+    border-top-right-radius: 10px;
+    opacity: 0.6;                    /* Başlangıç opaklık değeri belirledik */
+    transition: opacity 0.8s;        /* Yalnızca opacity efektleri için geçiş değerini belirledik */
+} 
+
+.refresim:hover{                     /* Resmin üzerine mouse ile gelindiğinde */
+    opacity: 1.0;                    /* Opaklık değerini arttırdık, normal değerine çevirdik */
+}
+
+.refbaslik {
+    font-size: 20px;                 /* Yazı boyutu belirlendi */
+    display: inline-block;           /* Satırda olsun ama genişlik yükseklik de olsun istediğim için yazdık böyle, bunu yazarsak da height ve width belirlememiz lazım yoksa kendini içeriğe göre kısıtlar */
+    width: 100%;                     /* Üstteki koddan ötürü genişliğini belirledik ve tüm div boyunca olsun dedik */
+    height: 40px;                    /* Yüksekliğini belirledik */
+    line-height: 40px;               /* Yazıyı dikeyde ortalamak için line-height: değeri yükseklik kadar olmalıdır */
+    text-align: center;              /* Yazıyı yatyayda ortaladık */
+    margin: 0;                       /* Resme yapışık olsun */
+    margin-top: -5px;                /* Bunu yazmadan önce resim ile başlık arasında bir boşluk kalıyordu böylelikle onu da halletmiş olduk */
+    color:black;                   /* Yazı rengi belirlendi */
+    background-color: #f1f1f1;     /* Arka plan rengi ayarladık */
+}
+
+.refdetay {
+    text-align: center;
+}
+
+/* Buradan sonrası Galeri sayfası özellikleri */
+
+.galeri {
+    width: 23%;
+    height: 200px;
+    background-color: white;       /* Arka plan rengini ayarladık */
+    float: left;                     /* Akış soldan başlayarak devam etsin dedik */
+    margin: 5px;
+    margin-left: 10px;                    /* Div ler arası boşluk çaktık */
+    border-radius: 10px;             /* Div lerin köşelerini yuvarladık */ 
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);    /* Hafif gölgeleme olayı devam */
+}
+
+.galeriresim {
+    width: 100%;                     /* div lerimin içindeki resimlerimin div i tamamen doldurması için bu iki kod yazılmıştır */
+    height: 100%;
+    border-radius: 10px;             /* Resimleri kenarlarından yuvarladık */
+    opacity: 0.6;                    /* Opaklık ayarını verdik */
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);   /* Gölgeleme olayı devam */
+    transition: all 0.6s;           /* Bütün efekt geçişleri için süresini belirledik */
+    object-fit: cover;              /* Resim kutu içerisine sığdıralacak şekilde sağdan soldan kırpılacak, ve uygun hale getirilecek (odak noktası açısından) */
+}
+
+.galeriresim:hover {
+    opacity: 1.0;                      /* Resimlerin opaklığını net olmaları için 1.0 yaptık */
+    border: 3px dotted white;
+    cursor: pointer;                   /* Mouse ile üzerine gelindiğinde, mouse un mevcut ok işareti el işaretine dönüşsün istedik */
+}
+
+/* Buradan sonrası İletişim sayfası özellikleri */
+
+iframe {                               /* Haritaya müdahale ediyoruz */
+    width: 97%;                        /* iframe genişliği burada o ikinci kısımdaki 80% lik kısmın 97%lik kısmı olarak belirlendi */
+    height: 350px;                     /* Yükselikiğini belirledik */
+    border-radius: 10px;               /* Köşelerini yuvarladık */
+    margin-top: 10px;                  /* Başlık ile arasını açtık, belirledik */
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);   /* Gölge oyunları devam */
+    margin-left: 12px;                 /* Başlığın boyutlarına uygun olacak şekilde de sol taraftan boşluk verdik */
+}
+
+.section2 {                            /* Formların olduğu kısma müdahale ediyoruz */
+    width: 97%;                        /* Genişlik aynı */
+    height: auto;                      /* Yükseklik içeriğe göre belirlensin dedik */
+    margin: auto;                      /* Kenar boşluklarını ayarladık */
+    margin-top: 10px;                  /* Haritaya bitişik olmasın diye aralarını açtık */
+    background-color: #f2f2f2;       /* Arka plan rengini ayarladık */
+    padding: 50px;                     /* İç kısmından 10 px lik boşluk verdik */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.form {
+    width: 49%;                        /* Form kısmında iki bölüm olduğu için bu şekilde verdik */
+    height: 380px;                     /* Yükseklik ayarlandı */
+    float: left;                       /* Elemanlar akışına soldan başlayarak devam etsin */
+    border: 1px solid #d8d8d8;       /* Dış tarafa bir çerçeve yaptık */
+    padding: 10px;                     /* İçteki elemanları çerçeveden uzaklaştırdık */
+    margin-right: 10px;                /* Yandaki div ile arasını ayarladık, açtık */
+}
+
+.col1 {                                /* Label kısmı */
+    width: 25%;                        /* Genişlik olarak formun 25% lik kısmını kaplasın */
+    float: left;                       /* Akış sollu olsun */
+    margin-top: 6px;                   /* Dış taraftan boşluğunu ayarladık */
+}
+
+.col2 {                                /* Input lar kısmı */
+    width: 75%;                        /* Formun kalan 75% lik kısmı olsun */
+    float: left;                       /* Akış sollu olsun */           
+    margin-top: 6px;                   /* Üst taraftan 6 px lik boşluk ile birbirlerinden de ayırdık */
+}
+
+label{
+    padding: 12px 12px 12px 0;         /* Label lar için iç boşluk ayarlamaları */
+    display: inline-block;             /* Aynı satırda block özellikleri de göstersin */
+}
+
+input[type=text], textarea {           /* text inputu ve text area için */
+    width: 100%;                       /* Genişlik olarak ikinci kısım olan 75% lik kısmını tamamını kaplasın */
+    padding: 12px;                     /* İç boşluk verdik */
+    border: 1px dashed #ccc;         /* inputların kenarlıklarını belirledik */
+    border-radius: 4px;                /* Köşelerini yuvarladık */
+    resize: none;
+}
+
+.row::after{                           /* classı row olan elemandan sonraliler için */
+    content: "";                       /* after veya before sözde sınıfları kullanılıyorsa mutlaka boş da olsa content ile birlikte kullanılmalıdır */
+    clear: both;                       /* Elemanların her iki tarafa da float yapmasını engeller, bir nevi ip gibi dizer onları */
+    display: block;                    /* Her bir eleman block şeklinde yani alt alta gösterilsin */
+}
+ 
+input[type=submit] {                   /* Gönder butonuna müdahele ediyoruz */    
+    float: right;
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type=text]:focus::placeholder{
+    color: transparent;
+}
+
+textarea:focus::placeholder{
+    color: transparent;
+}
+
+.adres {
+    width: 49%;                        /* Form kısmında iki bölüm olduğu için bu şekilde verdik */
+    height: 380px;                     /* Yükseklik ayarlandı */
+    float: right;                      /* Elemanlar akışına soldan başlayarak devam etsin */
+    border: 1px solid #d8d8d8;       /* Dış tarafa bir çerçeve yaptık */
+    padding: 10px;                     /* İçteki elemanları çerçeveden uzaklaştırdık */
+}
+
+h2 {                                   
+    text-align: center;                /* Adres başlığını ortaladık */         
+}
+
+.span1 {
+    display: block;                    /* Her bir span normalde inline bir elemandır ve yanyana yazar, bununla biz hepsini alt alta yazdırmış oluyoruz */
+    font-family: Calibri;
+    margin: 10px;
+    letter-spacing: 1.5;
+    text-align: center;
+    font-size: 16px;
+}
